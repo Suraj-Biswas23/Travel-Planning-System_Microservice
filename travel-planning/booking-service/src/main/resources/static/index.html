@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Booking Management</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <form id="booking-form">
+                    <input type="hidden" id="booking-id"> <!-- Hidden field for booking ID -->
+                    <div class="form-group">
+                        <label for="user-id">User ID</label>
+                        <input type="text" id="user-id" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itinerary-id">Itinerary ID</label>
+                        <input type="text" id="itinerary-id" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Booking Date</label>
+                        <input type="date" id="booking-date" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Booking</button>
+                    <button type="button" id="update-button" class="btn btn-success d-none">Update Booking</button>
+                </form>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Itinerary ID</th>
+                    <th>Booking Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="booking-table-body">
+                <!-- Dynamic content goes here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
