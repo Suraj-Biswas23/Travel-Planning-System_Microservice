@@ -39,6 +39,7 @@ public class BookingController {
                 .map(booking -> {
                     booking.setUserId(updatedBooking.getUserId());
                     booking.setItineraryId(updatedBooking.getItineraryId());
+                    booking.setBookingDate(updatedBooking.getBookingDate());
                     booking.setStatus(updatedBooking.getStatus());
                     bookingRepository.save(booking);
                     return ResponseEntity.ok(booking);

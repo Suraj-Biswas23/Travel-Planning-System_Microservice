@@ -40,6 +40,7 @@ public class NotificationController {
                     notification.setUserId(updatedNotification.getUserId());
                     notification.setMessage(updatedNotification.getMessage());
                     notification.setRead(updatedNotification.isRead());
+                    notification.setNotificationDate(updatedNotification.getNotificationDate());
                     notificationRepository.save(notification);
                     return ResponseEntity.ok(notification);
                 })

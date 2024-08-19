@@ -1,8 +1,8 @@
-// src/main/java/com/example/notification/model/Notification.java
 package com.example.notification.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.Date;
 
 @Document(collection = "notifications")
 public class Notification {
@@ -10,6 +10,7 @@ public class Notification {
     private String id;
     private String userId;
     private String message;
+    private String notificationDate;
     private boolean isRead;
 
     // Getters and Setters
@@ -35,6 +36,14 @@ public class Notification {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getNotificationDate() {
+        return notificationDate;
+    }
+
+    public void setNotificationDate(String notificationDate) {
+        this.notificationDate = notificationDate;
     }
 
     public boolean isRead() {
